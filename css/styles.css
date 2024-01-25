@@ -46,6 +46,8 @@ img {
   padding-bottom: 120px;
 }
 
+/******* HEADER *********/
+
 .header {
   border-bottom: 1px solid #e7e9fc;
   background: #fff;
@@ -151,6 +153,8 @@ img {
   color: #404bbf;
 }
 
+/******* MAIN SECTION *********/
+
 .main-section {
   width: 1440px;
   height: 600px;
@@ -219,6 +223,8 @@ img {
   color: #404bbf;
 }
 
+/******* FEATURES *********/
+
 .features {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -286,6 +292,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+/******* OUR TEAM *********/
 
 .sectin-ourteam {
   background-color: #f4f4fd;
@@ -406,6 +414,8 @@ img {
   gap: 24px;
 }
 
+/******* PORTFOLIO *********/
+
 .section-portfolio {
   background: #ffffff;
 }
@@ -492,7 +502,7 @@ img {
   border-top: none;
 }
 
-/* FOOTER */
+/******* FOOTER *********/
 
 .footer {
   background-color: #2e2f42;
@@ -503,8 +513,6 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
-  padding-top: 100px;
-  padding-bottom: 100px;
   margin-right: 120px;
 }
 
@@ -667,7 +675,7 @@ img {
   margin-left: 16px;
 }
 
-/* MODAL SECTION */
+/******* MODAL SECTION *********/
 
 .backdrop {
   width: 100%;
