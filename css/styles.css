@@ -31,8 +31,11 @@ img {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  width: 100%;
+  max-width: 288px;
+  padding-left: 16px;
+  padding-right: 16px;
+  /* width: 1158px; */
   margin: 0 auto;
 }
 
@@ -297,19 +300,15 @@ img {
 
 .sectin-ourteam {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  width: 1440px;
-  height: 732px;
   flex-shrink: 0;
   margin: auto;
-  padding: 120px 0;
 }
 
 .team-container {
-  width: 1440px;
-  height: 732px;
   flex-shrink: 0;
   background: var(--CLOUD, #f4f4fd);
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .title {
@@ -320,23 +319,24 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  margin-bottom: 72px;
+  padding-bottom: 72px;
 }
 
 .title-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 120px;
 }
 
 .title-item {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
   border-radius: 0px 0px 4px 4px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  margin-bottom: 72px;
 }
 
 .title-photo {
@@ -352,9 +352,9 @@ img {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  margin-bottom: 8px;
   text-align: center;
+  padding-top: 32px;
+  padding-bottom: 8px;
 }
 
 .title-name-discription {
@@ -364,10 +364,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-}
-
-.title-list-social {
-  margin-top: 8px;
+  padding-bottom: 8px;
 }
 
 .title-list-social-name {
@@ -404,7 +401,6 @@ img {
 }
 
 .name-container {
-  padding: 32px 0;
 }
 
 .title-list-social {
@@ -412,6 +408,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  padding-bottom: 32px;
 }
 
 /******* PORTFOLIO *********/
@@ -428,7 +425,6 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  padding-top: 120px;
   margin-top: 120px;
   margin-bottom: 72px;
 }
@@ -917,4 +913,40 @@ img {
   color: #404bbf;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
+}
+
+/******* MEDIA TAB ********/
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+
+  .title-list {
+    gap: 64px 24px;
+  }
+
+  .title-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/******* MEDIA DESKTOP ********/
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .team-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .title-list {
+    gap: 24px;
+  }
+  .title-item {
+    width: calc((100% - 72px) / 4);
+  }
 }
