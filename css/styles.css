@@ -32,16 +32,10 @@ img {
 
 .container {
   width: 100%;
-  max-width: 288px;
-  padding-left: 16px;
-  padding-right: 16px;
+  max-width: 320px;
+  padding: 0 16px;
   /* width: 1158px; */
   margin: 0 auto;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
 }
 
 .section {
@@ -58,14 +52,21 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header-navigation {
   display: flex;
   align-items: center;
 }
 
 .header-list {
-  display: flex;
-  gap: 40px;
+  /* display: flex; */
+  display: none;
+  /* gap: 40px; */
 }
 
 .header-logo-blue {
@@ -86,7 +87,8 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  /* margin-right: 76px; */
+  padding: 17px 0;
 }
 
 .header-item-link {
@@ -130,19 +132,20 @@ img {
 .address {
   font-style: normal;
   margin-left: auto;
+  display: none;
 }
 
 .address-list {
-  display: flex;
-  gap: 40px;
+  /* display: flex;
+  gap: 40px; */
 }
 
 .address-item-contact {
   color: var(--SLATE, #434455);
-  font-size: 16px;
+  /* font-size: 16px; */
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  /* line-height: 1.5;
+  letter-spacing: 0.02em; */
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,11 +159,21 @@ img {
   color: #404bbf;
 }
 
+.open-menu-btn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
 /******* MAIN SECTION *********/
 
 .main-section {
-  width: 1440px;
-  height: 600px;
+  /* max-width: 1440px;
+  height: 600px; */
+  max-width: 320px;
+  height: 432px;
   flex-shrink: 0;
   background-color: #2e2f42;
   display: block;
@@ -172,7 +185,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -182,14 +194,19 @@ img {
 .main-start {
   color: var(--WHITE, #fff);
   text-align: center;
-  font-size: 56px;
+  /* font-size: 56px; */
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  /* line-height: 1.07; */
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
+  /* max-width: 496px; */
+  max-width: 216px;
   margin: 0 auto;
-  margin-bottom: 48px;
-  padding-top: 188px;
+  /* margin-bottom: 48px; */
+  margin-bottom: 72px;
+  /* padding-top: 188px; */
+  padding-top: 72px;
 }
 
 .main-btn {
@@ -206,7 +223,7 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
   padding: 16px 32px;
-  margin-bottom: 188px;
+  /* margin-bottom: 188px; */
   margin: 0 auto;
   min-width: 169px;
   transition-property: background-color;
@@ -915,11 +932,70 @@ img {
   border: none;
 }
 
+/* *********************************** */
 /******* MEDIA TAB ********/
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
+    padding: 0 15px;
+  }
+
+  /****** HEADER *****/
+
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+
+  .address {
+    display: block;
+  }
+
+  .header-logo {
+    margin-right: 120px;
+  }
+
+  .address-item-contac {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /****** MAIN SECTION ******/
+
+  .main-section {
+    max-width: 768px;
+    height: 436px;
+  }
+
+  .main-start {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+    padding-top: 112px;
+  }
+
+  .main-btn {
+    margin-bottom: 112px;
+  }
+
+  /****** OURTEAM ******/
+
+  .team-container {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   .title-list {
@@ -931,12 +1007,48 @@ img {
   }
 }
 
+/* *********************************** */
 /******* MEDIA DESKTOP ********/
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
   }
+
+  /****** HEADER *****/
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .address-item-contac {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /****** MAIN SECTION ******/
+
+  .main-section {
+    max-width: 1440px;
+    height: 600px;
+  }
+
+  .main-start {
+    margin-bottom: 48px;
+    padding-top: 188px;
+  }
+
+  .main-btn {
+    margin-bottom: 112px;
+  }
+
+  /****** OURTEAM ******/
 
   .team-container {
     padding-top: 120px;
